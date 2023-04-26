@@ -1,0 +1,527 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{C7C326F3-D103-4635-9D26-DAE9FD701FFC}</ProjectGuid>
+    <OutputType>AppContainerExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Colorie</RootNamespace>
+    <AssemblyName>Colorie</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+    <TargetPlatformVersion>10.0.22621.0</TargetPlatformVersion>
+    <TargetPlatformMinVersion>10.0.22621.0</TargetPlatformMinVersion>
+    <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <AppxBundlePlatforms>x86|x64</AppxBundlePlatforms>
+    <RuntimeIdentifiers>win10-arm;win10-arm-aot;win10-x86;win10-x86-aot;win10-x64;win10-x64-aot</RuntimeIdentifiers>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <CodeAnalysisRuleSet>samples.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+    <CodeAnalysisRuleSet>samples.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <CodeAnalysisRuleSet>samples.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <OutputPath>bin\ARM\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+    <CodeAnalysisRuleSet>samples.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <CodeAnalysisRuleSet>samples.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+    <CodeAnalysisRuleSet>samples.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <CodeAnalysisRuleSet>samples.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM64'">
+    <OutputPath>bin\ARM64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+    <CodeAnalysisRuleSet>samples.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+    <None Include="samples.ruleset" />
+    <PRIResource Include="Strings\en-US\Resources.resw">
+      <SubType>Designer</SubType>
+    </PRIResource>
+    <Content Include="Assets\LibraryImages\animal\animal.png" />
+    <Content Include="Assets\LibraryImages\animal\animalHighResolution.png" />
+    <Content Include="Assets\LibraryImages\castle\castle.preprocessing" />
+    <Content Include="Assets\LibraryImages\castle\castle.thumbnail" />
+    <Content Include="Assets\LibraryImages\castle\castleHighResolution.preprocessing" />
+    <Content Include="Assets\LibraryImages\animal\animal.preprocessing" />
+    <Content Include="Assets\LibraryImages\animal\animal.thumbnail" />
+    <Content Include="Assets\LibraryImages\animal\animalHighResolution.preprocessing" />
+    <Content Include="Assets\LibraryImages\face\face.preprocessing" />
+    <Content Include="Assets\LibraryImages\face\face.thumbnail" />
+    <Content Include="Assets\LibraryImages\face\faceHighResolution.preprocessing" />
+    <Content Include="Assets\LibraryImages\flower\flower.preprocessing" />
+    <Content Include="Assets\LibraryImages\flower\flower.thumbnail" />
+    <Content Include="Assets\LibraryImages\flower\flowerHighResolution.preprocessing" />
+    <Content Include="Assets\LibraryImages\pineapple\pineapple.preprocessing" />
+    <Content Include="Assets\LibraryImages\pineapple\pineapple.thumbnail" />
+    <Content Include="Assets\LibraryImages\pineapple\pineappleHighResolution.preprocessing" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Constants.cs" />
+    <Compile Include="Common\DeviceResolutionType.cs" />
+    <Compile Include="Common\Observable.cs" />
+    <Compile Include="Common\Tools.cs" />
+    <Compile Include="Views\ArtworkTemplateSelector.cs" />
+    <Compile Include="Components\CanvasInputController.cs" />
+    <Compile Include="Common\EventArgs.cs" />
+    <Compile Include="Components\InkCellController.cs" />
+    <Compile Include="Components\InkStrokeMathHelper.cs" />
+    <Compile Include="Components\NavigationController.cs" />
+    <Compile Include="Components\PhotoPrintHelper.cs" />
+    <Compile Include="Components\PrintHelper.cs" />
+    <Compile Include="Components\RadialControlHelper.cs" />
+    <Compile Include="Models\ColorieExport.cs" />
+    <Compile Include="UndoRedoOperations\AddStrokes.cs" />
+    <Compile Include="UndoRedoOperations\EraseAllCells.cs" />
+    <Compile Include="UndoRedoOperations\EraseAllStrokes.cs" />
+    <Compile Include="UndoRedoOperations\EraseCell.cs" />
+    <Compile Include="UndoRedoOperations\EraseStrokes.cs" />
+    <Compile Include="UndoRedoOperations\FillCell.cs" />
+    <Compile Include="UndoRedoOperations\UndoRedo.cs" />
+    <Compile Include="UndoRedoOperations\Operation.cs" />
+    <Compile Include="FileIO\ColorieSettingsReader.cs" />
+    <Compile Include="FileIO\ColorieSettingsWriter.cs" />
+    <Compile Include="FileIO\ColorieFileReader.cs" />
+    <Compile Include="FileIO\ColorieFileWriter.cs" />
+    <Compile Include="FileIO\ColorSettingsReader.cs" />
+    <Compile Include="FileIO\ColorSettingsWriter.cs" />
+    <Compile Include="FileIO\TapToFillReader.cs" />
+    <Compile Include="FileIO\TapToFillWriter.cs" />
+    <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="Models\ColorieBitmapLibraryImage.cs" />
+    <Compile Include="Models\Colorie.cs" />
+    <Compile Include="Models\ColorieSettings.cs" />
+    <Compile Include="Models\ColorieLibraryImage.cs" />
+    <Compile Include="Models\ColorieExporter.cs" />
+    <Compile Include="Models\DrawingTool.cs" />
+    <Compile Include="Models\LibraryThumbnail.cs" />
+    <Compile Include="Models\MyArtworkThumbnail.cs" />
+    <Compile Include="Models\Thumbnail.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UndoRedoOperations\UndoRedoStrokeManager.cs" />
+    <Compile Include="ViewModels\ColorPaletteItem.cs" />
+    <Compile Include="ViewModels\ColorPalettePageViewModel.cs" />
+    <Compile Include="ViewModels\ColorPaletteState.cs" />
+    <Compile Include="Views\CanvasElements.cs" />
+    <Compile Include="Views\ColorieInkToolbar.xaml.cs">
+      <DependentUpon>ColorieInkToolbar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ColorieLoadingDialog.xaml.cs">
+      <DependentUpon>ColorieLoadingDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ColoriePivotItem.xaml.cs">
+      <DependentUpon>ColoriePivotItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ColoriePage.xaml.cs">
+      <DependentUpon>ColoriePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ColoriePageController.cs" />
+    <Compile Include="Views\ColorPalette.xaml.cs">
+      <DependentUpon>ColorPalette.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Home.xaml.cs">
+      <DependentUpon>Home.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LibraryPivotItem.cs" />
+    <Compile Include="Views\MyArtworkPivotItem.cs" />
+    <Compile Include="Views\PreviewUnavailablePage.xaml.cs">
+      <DependentUpon>PreviewUnavailablePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\ColorPaletteViewModel.cs" />
+    <Compile Include="ViewModels\HomeViewModel.cs" />
+    <Compile Include="ViewModels\PivotItemViewModel.cs" />
+    <Compile Include="Components\VariableSizedGridView.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest">
+      <SubType>Designer</SubType>
+    </AppxManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\ColorieAppList.scale-100.png" />
+    <Content Include="Assets\ColorieAppList.scale-125.png" />
+    <Content Include="Assets\ColorieAppList.scale-150.png" />
+    <Content Include="Assets\ColorieAppList.scale-200.png" />
+    <Content Include="Assets\ColorieAppList.scale-400.png" />
+    <Content Include="Assets\ColorieAppList.targetsize-16.png" />
+    <Content Include="Assets\ColorieAppList.targetsize-16_altform-unplated.png" />
+    <Content Include="Assets\ColorieAppList.targetsize-20.png" />
+    <Content Include="Assets\ColorieAppList.targetsize-20_altform-unplated.png" />
+    <Content Include="Assets\ColorieAppList.targetsize-24.png" />
+    <Content Include="Assets\ColorieAppList.targetsize-24_altform-unplated.png" />
+    <Content Include="Assets\ColorieAppList.targetsize-256.png" />
+    <Content Include="Assets\ColorieAppList.targetsize-256_altform-unplated.png" />
+    <Content Include="Assets\ColorieAppList.targetsize-30.png" />
+    <Content Include="Assets\ColorieAppList.targetsize-30_altform-unplated.png" />
+    <Content Include="Assets\ColorieAppList.targetsize-32.png" />
+    <Content Include="Assets\ColorieAppList.targetsize-32_altform-unplated.png" />
+    <Content Include="Assets\ColorieAppList.targetsize-36.png" />
+    <Content Include="Assets\ColorieAppList.targetsize-36_altform-unplated.png" />
+    <Content Include="Assets\ColorieAppList.targetsize-40.png" />
+    <Content Include="Assets\ColorieAppList.targetsize-40_altform-unplated.png" />
+    <Content Include="Assets\ColorieAppList.targetsize-48.png" />
+    <Content Include="Assets\ColorieAppList.targetsize-48_altform-unplated.png" />
+    <Content Include="Assets\ColorieAppList.targetsize-60.png" />
+    <Content Include="Assets\ColorieAppList.targetsize-60_altform-unplated.png" />
+    <Content Include="Assets\ColorieAppList.targetsize-64.png" />
+    <Content Include="Assets\ColorieAppList.targetsize-64_altform-unplated.png" />
+    <Content Include="Assets\ColorieAppList.targetsize-72.png" />
+    <Content Include="Assets\ColorieAppList.targetsize-72_altform-unplated.png" />
+    <Content Include="Assets\ColorieAppList.targetsize-80.png" />
+    <Content Include="Assets\ColorieAppList.targetsize-80_altform-unplated.png" />
+    <Content Include="Assets\ColorieAppList.targetsize-96.png" />
+    <Content Include="Assets\ColorieAppList.targetsize-96_altform-unplated.png" />
+    <Content Include="Assets\ColorieBadgeLogo.scale-100.png" />
+    <Content Include="Assets\ColorieBadgeLogo.scale-125.png" />
+    <Content Include="Assets\ColorieBadgeLogo.scale-150.png" />
+    <Content Include="Assets\ColorieBadgeLogo.scale-200.png" />
+    <Content Include="Assets\ColorieBadgeLogo.scale-400.png" />
+    <Content Include="Assets\ColorieLargeTile.scale-100.png" />
+    <Content Include="Assets\ColorieLargeTile.scale-125.png" />
+    <Content Include="Assets\ColorieLargeTile.scale-150.png" />
+    <Content Include="Assets\ColorieLargeTile.scale-200.png" />
+    <Content Include="Assets\ColorieLargeTile.scale-400.png" />
+    <Content Include="Assets\ColorieMedTile.scale-100.png" />
+    <Content Include="Assets\ColorieMedTile.scale-125.png" />
+    <Content Include="Assets\ColorieMedTile.scale-150.png" />
+    <Content Include="Assets\ColorieMedTile.scale-200.png" />
+    <Content Include="Assets\ColorieMedTile.scale-400.png" />
+    <Content Include="Assets\ColorieSmallTile.scale-100.png" />
+    <Content Include="Assets\ColorieSmallTile.scale-125.png" />
+    <Content Include="Assets\ColorieSmallTile.scale-150.png" />
+    <Content Include="Assets\ColorieSmallTile.scale-200.png" />
+    <Content Include="Assets\ColorieSmallTile.scale-400.png" />
+    <Content Include="Assets\ColorieSplashScreen.scale-100.png" />
+    <Content Include="Assets\ColorieSplashScreen.scale-125.png" />
+    <Content Include="Assets\ColorieSplashScreen.scale-150.png" />
+    <Content Include="Assets\ColorieSplashScreen.scale-200.png" />
+    <Content Include="Assets\ColorieSplashScreen.scale-400.png" />
+    <Content Include="Assets\ColorieStoreLogo.scale-100.png" />
+    <Content Include="Assets\ColorieStoreLogo.scale-125.png" />
+    <Content Include="Assets\ColorieStoreLogo.scale-150.png" />
+    <Content Include="Assets\ColorieStoreLogo.scale-200.png" />
+    <Content Include="Assets\ColorieStoreLogo.scale-400.png" />
+    <Content Include="Assets\ColorieWideTile.scale-100.png" />
+    <Content Include="Assets\ColorieWideTile.scale-125.png" />
+    <Content Include="Assets\ColorieWideTile.scale-150.png" />
+    <Content Include="Assets\ColorieWideTile.scale-200.png" />
+    <Content Include="Assets\ColorieWideTile.scale-400.png" />
+    <Content Include="Assets\contrast-black\ColorieAppList.scale-100_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorieAppList.scale-125_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorieAppList.scale-150_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorieAppList.scale-200_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorieAppList.scale-400_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorieAppList.targetsize-16_altform-unplated_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorieAppList.targetsize-16_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorieAppList.targetsize-20_altform-unplated_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorieAppList.targetsize-20_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorieAppList.targetsize-24_altform-unplated_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorieAppList.targetsize-24_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorieAppList.targetsize-256_altform-unplated_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorieAppList.targetsize-256_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorieAppList.targetsize-30_altform-unplated_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorieAppList.targetsize-30_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorieAppList.targetsize-32_altform-unplated_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorieAppList.targetsize-32_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorieAppList.targetsize-36_altform-unplated_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorieAppList.targetsize-36_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorieAppList.targetsize-40_altform-unplated_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorieAppList.targetsize-40_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorieAppList.targetsize-48_altform-unplated_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorieAppList.targetsize-48_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorieAppList.targetsize-60_altform-unplated_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorieAppList.targetsize-60_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorieAppList.targetsize-64_altform-unplated_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorieAppList.targetsize-64_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorieAppList.targetsize-72_altform-unplated_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorieAppList.targetsize-72_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorieAppList.targetsize-80_altform-unplated_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorieAppList.targetsize-80_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorieAppList.targetsize-96_altform-unplated_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorieAppList.targetsize-96_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorieBadgeLogo.scale-100_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorieBadgeLogo.scale-125_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorieBadgeLogo.scale-150_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorieBadgeLogo.scale-200_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorieBadgeLogo.scale-400_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorieLargeTile.scale-100_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorieLargeTile.scale-125_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorieLargeTile.scale-150_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorieLargeTile.scale-200_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorieLargeTile.scale-400_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorieMedTile.scale-100_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorieMedTile.scale-125_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorieMedTile.scale-150_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorieMedTile.scale-200_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorieMedTile.scale-400_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorieSmallTile.scale-100_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorieSmallTile.scale-125_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorieSmallTile.scale-150_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorieSmallTile.scale-200_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorieSmallTile.scale-400_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorieSplashScreen.scale-100_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorieSplashScreen.scale-125_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorieSplashScreen.scale-150_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorieSplashScreen.scale-200_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorieSplashScreen.scale-400_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorieStoreLogo.scale-100_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorieStoreLogo.scale-125_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorieStoreLogo.scale-150_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorieStoreLogo.scale-200_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorieStoreLogo.scale-400_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorieWideTile.scale-100_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorieWideTile.scale-125_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorieWideTile.scale-150_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorieWideTile.scale-200_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorieWideTile.scale-400_contrast-black.png" />
+    <Content Include="Assets\contrast-white\ColorieAppList.scale-100_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorieAppList.scale-125_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorieAppList.scale-150_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorieAppList.scale-200_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorieAppList.scale-400_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorieAppList.targetsize-16_altform-unplated_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorieAppList.targetsize-16_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorieAppList.targetsize-20_altform-unplated_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorieAppList.targetsize-20_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorieAppList.targetsize-24_altform-unplated_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorieAppList.targetsize-24_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorieAppList.targetsize-256_altform-unplated_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorieAppList.targetsize-256_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorieAppList.targetsize-30_altform-unplated_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorieAppList.targetsize-30_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorieAppList.targetsize-32_altform-unplated_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorieAppList.targetsize-32_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorieAppList.targetsize-36_altform-unplated_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorieAppList.targetsize-36_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorieAppList.targetsize-40_altform-unplated_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorieAppList.targetsize-40_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorieAppList.targetsize-48_altform-unplated_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorieAppList.targetsize-48_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorieAppList.targetsize-60_altform-unplated_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorieAppList.targetsize-60_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorieAppList.targetsize-64_altform-unplated_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorieAppList.targetsize-64_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorieAppList.targetsize-72_altform-unplated_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorieAppList.targetsize-72_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorieAppList.targetsize-80_altform-unplated_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorieAppList.targetsize-80_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorieAppList.targetsize-96_altform-unplated_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorieAppList.targetsize-96_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorieBadgeLogo.scale-100_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorieBadgeLogo.scale-125_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorieBadgeLogo.scale-150_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorieBadgeLogo.scale-200_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorieBadgeLogo.scale-400_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorieLargeTile.scale-100_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorieLargeTile.scale-125_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorieLargeTile.scale-150_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorieLargeTile.scale-200_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorieLargeTile.scale-400_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorieMedTile.scale-100_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorieMedTile.scale-125_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorieMedTile.scale-150_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorieMedTile.scale-200_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorieMedTile.scale-400_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorieSmallTile.scale-100_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorieSmallTile.scale-125_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorieSmallTile.scale-150_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorieSmallTile.scale-200_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorieSmallTile.scale-400_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorieSplashScreen.scale-100_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorieSplashScreen.scale-125_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorieSplashScreen.scale-150_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorieSplashScreen.scale-200_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorieSplashScreen.scale-400_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorieStoreLogo.scale-100_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorieStoreLogo.scale-125_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorieStoreLogo.scale-150_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorieStoreLogo.scale-200_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorieStoreLogo.scale-400_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorieWideTile.scale-100_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorieWideTile.scale-125_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorieWideTile.scale-150_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorieWideTile.scale-200_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorieWideTile.scale-400_contrast-white.png" />
+    <Content Include="Assets\DefaultThumbnail.png" />
+    <Content Include="Assets\Icons\Bucket\BucketColor.scale-100_contrast-black.png" />
+    <Content Include="Assets\Icons\Bucket\BucketColor.scale-100_contrast-standard.png" />
+    <Content Include="Assets\Icons\Bucket\BucketColor.scale-100_contrast-white.png" />
+    <Content Include="Assets\Icons\Bucket\BucketColor.scale-125_contrast-black.png" />
+    <Content Include="Assets\Icons\Bucket\BucketColor.scale-125_contrast-standard.png" />
+    <Content Include="Assets\Icons\Bucket\BucketColor.scale-125_contrast-white.png" />
+    <Content Include="Assets\Icons\Bucket\BucketColor.scale-150_contrast-black.png" />
+    <Content Include="Assets\Icons\Bucket\BucketColor.scale-150_contrast-standard.png" />
+    <Content Include="Assets\Icons\Bucket\BucketColor.scale-150_contrast-white.png" />
+    <Content Include="Assets\Icons\Bucket\BucketColor.scale-200_contrast-black.png" />
+    <Content Include="Assets\Icons\Bucket\BucketColor.scale-200_contrast-standard.png" />
+    <Content Include="Assets\Icons\Bucket\BucketColor.scale-200_contrast-white.png" />
+    <Content Include="Assets\Icons\Bucket\BucketColor.scale-400_contrast-black.png" />
+    <Content Include="Assets\Icons\Bucket\BucketColor.scale-400_contrast-standard.png" />
+    <Content Include="Assets\Icons\Bucket\BucketColor.scale-400_contrast-white.png" />
+    <Content Include="Assets\Icons\test\ColorieAppList.scale-100.png" />
+    <Content Include="Assets\LibraryImages\castle\castle.png" />
+    <Content Include="Assets\LibraryImages\castle\castleHighResolution.png" />
+    <Content Include="Assets\LibraryImages\face\face.png" />
+    <Content Include="Assets\LibraryImages\face\faceHighResolution.png" />
+    <Content Include="Assets\LibraryImages\flower\flower.png" />
+    <Content Include="Assets\LibraryImages\flower\flowerHighResolution.png" />
+    <Content Include="Assets\LibraryImages\pineapple\pineapple.png" />
+    <Content Include="Assets\LibraryImages\pineapple\pineappleHighResolution.png" />
+    <Content Include="Properties\Default.rd.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="Styles\Styles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\ColorieInkToolbar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ColorieLoadingDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ColoriePivotItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ColoriePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ColorPalette.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Home.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\PreviewUnavailablePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
+      <Version>6.2.14</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Toolkit.Uwp.UI.Controls">
+      <Version>7.0.0-preview1</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.UI.Xaml">
+      <Version>2.4.0-prerelease.200322001</Version>
+    </PackageReference>
+    <PackageReference Include="StyleCop.Analyzers">
+      <Version>1.2.0-beta.435</Version>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
+    <VisualStudioVersion>14.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

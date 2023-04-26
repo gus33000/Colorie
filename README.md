@@ -13,22 +13,22 @@ statusNotificationTargets:
   category: CustomUserInteractions Inking Printing FilesFoldersAndLibraries
 -->
 
-# Coloring Book sample (updated to WinUI 2.4 - May 2020)
+# Colorie sample (updated to WinUI 2.4 - May 2020)
 
 A mini-app that demonstrates the versatility of Windows Ink (including the Windows Ink Toolbar)
 and radial controller (for Wheel devices such as the Surface Dial) features. 
  
 Using the extensive customization features provided by the inking and radial controller APIs, 
-this sample app incorporates coloring book functionality (line art, standard inking tools such 
+this sample app incorporates colorie functionality (line art, standard inking tools such 
 as pen and pencil), a custom Ink Toolbar that features additional tools (flood fill, 
 touch inking, undo/redo), and a fully customized standalone color palette containing 
 a much more extensive collection of colors.
 
-![Coloring Book sample screenshot](screenshot.png)
+![Colorie sample screenshot](screenshot.png)
 
 ## Features
 
-The Coloring Book sample includes the following features:
+The Colorie sample includes the following features:
 
 * Windows Ink with improved ink rendering performance using the custom ink drying APIs
 * Windows Ink Toolbar with various customizations
@@ -41,7 +41,7 @@ The Coloring Book sample includes the following features:
 * Print support
 * Share and Export
 * Autosave
-* Process and add your own line art to the collection of coloring projects
+* Process and add your own line art to the collection of colorie projects
 
 This sample does not cover Windows Ink Analysis.
 
@@ -52,13 +52,13 @@ The current version of this sample includes updates to support WinUI 2.4 (includ
 > Note - This sample is targeted and tested for Windows 10, version 2004 (10.0; Build 19041), and Visual Studio 2019. 
 If you prefer, you can use project properties to retarget the project(s) to Windows 10, version 1903 (10.0; Build 18362). 
 
-For a simpler inking sample, see [Coloring Book V1](https://github.com/Microsoft/Windows-appsample-coloringbook/releases/tag/v1.0).
+For a simpler inking sample, see [Colorie V1](https://github.com/Microsoft/Windows-appsample-colorie/releases/tag/v1.0).
 
 ## March 2018 update
 
 This version of the sample includes extensive architecture, code, and functional improvements
 over the previous version. These updates necessarily make the sample more complicated. For a simpler inking 
-sample, see [Coloring Book V1](https://github.com/Microsoft/Windows-appsample-coloringbook/releases/tag/v1.0).
+sample, see [Colorie V1](https://github.com/Microsoft/Windows-appsample-colorie/releases/tag/v1.0).
 
 ## UWP development
 
@@ -73,8 +73,8 @@ the [Windows Insider Program](https://insider.windows.com).
 
 There are two projects in the VS solution for this sample:
 
-* ColoringBook (default) - the actual coloring book app.
-* ColoringBookPreprocessingGenerator - a utility for processing your own line art for use in the ColoringBook app.
+* Colorie (default) - the actual colorie app.
+* ColoriePreprocessingGenerator - a utility for processing your own line art for use in the Colorie app.
 
 You can Start Debugging (F5) or Start Without Debugging (Ctrl+F5) to try it out. The app will run in the emulator or on physical devices.
 
@@ -85,9 +85,9 @@ You can Start Debugging (F5) or Start Without Debugging (Ctrl+F5) to try it out.
 ### Custom dry ink rendering canvas
 
 By default, ink input is processed on a low-latency background thread and rendered "wet" as it is drawn. When the stroke is completed (pen or finger lifted, or mouse button released), the stroke is processed on the UI thread and rendered "dry" to the [InkCanvas](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas) layer (above the application content and replacing the wet ink).
-Windows Ink enables you to override this behavior and completely customize the inking experience by custom drying the ink input and providing more efficient management of large, or complex, collections of ink strokes. For example code, see [ColoringPage.xaml](ColoringBook/Views/ColoringPage.xaml#L25), [ColoringPage.xaml.cs](ColoringBook/Views/ColoringPage.xaml.cs#L25), and [ColoringPageController.cs](ColoringBook/Views/ColoringPageController.cs#L25).
+Windows Ink enables you to override this behavior and completely customize the inking experience by custom drying the ink input and providing more efficient management of large, or complex, collections of ink strokes. For example code, see [ColoriePage.xaml](Colorie/Views/ColoriePage.xaml#L25), [ColoriePage.xaml.cs](Colorie/Views/ColoriePage.xaml.cs#L25), and [ColoriePageController.cs](Colorie/Views/ColoriePageController.cs#L25).
 
-To resolve ink rendering issues when a user zooms in or out (or for any change in display DPI), we adjust the DPI scale of the dry ink canvas in in the [ColoringPage.ScrollViewer_ViewChanged method](ColoringBook/Views/ColoringPage.xaml.cs#L185).
+To resolve ink rendering issues when a user zooms in or out (or for any change in display DPI), we adjust the DPI scale of the dry ink canvas in in the [ColoriePage.ScrollViewer_ViewChanged method](Colorie/Views/ColoriePage.xaml.cs#L185).
 
 ### Custom InkToolbar
 
@@ -95,47 +95,47 @@ To resolve ink rendering issues when a user zooms in or out (or for any change i
 * Custom pen and pencil tools with stroke size slider and stroke graphic (exposed to developers), and color palette removed and replaced with custom palette described later.
 * Custom eraser button with two eraser modes: stroke erase and cell erase.
 * Touch inking.
-* See [ColoringBookInkToolbar.xaml](ColoringBook/Views/ColoringBookInkToolbar.xaml#L25) and [ColoringBookInkToolbar.xaml.cs](ColoringBook/Views/ColoringBookInkToolbar.xaml.cs#L25).
+* See [ColorieInkToolbar.xaml](Colorie/Views/ColorieInkToolbar.xaml#L25) and [ColorieInkToolbar.xaml.cs](Colorie/Views/ColorieInkToolbar.xaml.cs#L25).
 
 ### Custom color palette
 
 * More extensive set of default colors.
 * Always visible.
 * Rich color picker on press and hold (or right button click for mouse).
-* See [ColorPalette.xaml](ColoringBook/Views/ColorPalette.xaml#L25) and [ColorPalette.xaml.cs](ColoringBook/Views/ColorPalette.xaml.cs#L25).
+* See [ColorPalette.xaml](Colorie/Views/ColorPalette.xaml#L25) and [ColorPalette.xaml.cs](Colorie/Views/ColorPalette.xaml.cs#L25).
 
 ### Surface Dial (Wheel device) support
 
 * Default InkToolbar integration.
 * Custom Undo/Redo ink back stack.
-* See [RadialControlHelper.cs](ColoringBook/Components/RadialControlHelper.cs#L25).
+* See [RadialControlHelper.cs](Colorie/Components/RadialControlHelper.cs#L25).
 
 ### Undo/Redo
 
 * Each operation uses a StartTransaction() call -> [operations] -> EndTransaction() process, which enables multiple operations to go into one Undo/Redo back stack item.
-* Each operation implements the [IUndoRedoOperation](ColoringBook/UndoRedoOperations/Operation.cs#L50) interface.
-* See [UndoRedo.cs](ColoringBook/UndoRedoOperations/UndoRedo.cs#L25).
+* Each operation implements the [IUndoRedoOperation](Colorie/UndoRedoOperations/Operation.cs#L50) interface.
+* See [UndoRedo.cs](Colorie/UndoRedoOperations/UndoRedo.cs#L25).
 
 ### Autosave
 
 * A 500 ms timer is started when a specific operation completes (such as inking, eraser, undo/redo).
 * After the timer completes, and it has not been restarted by a new operation, the save function is called.
-* See [ColoringPageController.cs](ColoringBook/Views/ColoringPageController.cs#L91).
+* See [ColoriePageController.cs](Colorie/Views/ColoriePageController.cs#L91).
 
 ### Printing
 
 * Derived from the [Windows printing sample](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Printing).
-* See [PhotoPrintHelper.cs](ColoringBook/Components/PhotoPrintHelper.cs#L25).
+* See [PhotoPrintHelper.cs](Colorie/Components/PhotoPrintHelper.cs#L25).
 
 ### Sharing and export
 
-* For exporting as a png file, we use [RenderTargetBitmap](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.imaging.rendertargetbitmap) to create an image of the combined content of a XAML visual tree (the ColoringCanvas object in this sample). This eliminates the need to manually composite the different layers of the canvas.
+* For exporting as a png file, we use [RenderTargetBitmap](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.imaging.rendertargetbitmap) to create an image of the combined content of a XAML visual tree (the ColorieCanvas object in this sample). This eliminates the need to manually composite the different layers of the canvas.
 * For sharing we use the standard UWP [Share contract](https://docs.microsoft.com/windows/uwp/app-to-app/share-data).
-* See [ColoringExporter.cs](ColoringBook/Models/ColoringExporter.cs#L25).
+* See [ColorieExporter.cs](Colorie/Models/ColorieExporter.cs#L25).
 
 ### Ink canvas
 
-Each ColoringBook coloring page is composed of 4 layers:
+Each Colorie colorie page is composed of 4 layers:
 
 1. The top layer is the line art image to be colored. This sits on top of everything to ensure ink does not cover the black lines of the image.
 2. The second layer is the wet ink canvas where ink is rendered as it’s drawn, but is not dried.
@@ -147,27 +147,27 @@ Each ColoringBook coloring page is composed of 4 layers:
 
 ### Inking within cells
 
-The ColoringBook sample includes a default set of line art images that have been pre-processed to identify coloring regions. The region boundaries are derived from the lines in the images and are used to constrain inking to the active region.
+The Colorie sample includes a default set of line art images that have been pre-processed to identify colorie regions. The region boundaries are derived from the lines in the images and are used to constrain inking to the active region.
 Users can draw individual ink strokes with the pen or pencil tools, or use the flood fill tool for more immediate gratification. Once inking has started in a region, strokes are not rendered outside the boundary of that region.
 
 ## Adding your own artwork
 
-This sample includes the ColoringBookPreprocessingGenerator project, which is the utility we built to process line art for use in the ColoringBook app. You can use this utility for your own line art.
+This sample includes the ColoriePreprocessingGenerator project, which is the utility we built to process line art for use in the Colorie app. You can use this utility for your own line art.
 
 1. In a single folder, create your line art images. 
 We recommend greyscale images of two sizes: 2000 x 1125 for default resolution and 4000 x 2250 for high resolution.
 2. Name them *imagename*.png and *imagename*HighResolution.png, respectively.
 3. Create a thumbnail image from your original images by creating a copy of your original image and resizing it to 255 x 127.
 4. Rename this file to *imagename*.thumbnail. 
-5. Build and run the ColoringBookPreprocessingGenerator project.
+5. Build and run the ColoriePreprocessingGenerator project.
 6. Process your line art images. There are two processing options:
-  a. Convert white to transparent in image. This converts whites and grays to their corresponding opacity value for a png image. This is necessary to ensure the background of the coloring image is transparent for seeing the layers of the coloring canvas under the source image.
+  a. Convert white to transparent in image. This converts whites and grays to their corresponding opacity value for a png image. This is necessary to ensure the background of the colorie image is transparent for seeing the layers of the colorie canvas under the source image.
   b. Generate Preprocessing - this creates the cell dictionary that maps co-ordinates to cells.
-7. Add the output directory to the ColoringBook project under Assets/LibraryImages.
+7. Add the output directory to the Colorie project under Assets/LibraryImages.
 
 ## Known issues
 
-**Issue:** Ink bleeding into other regions when coloring near a boundary  
+**Issue:** Ink bleeding into other regions when colorie near a boundary  
 **Reason:** Clipping ink points as they cross a boundary is not a trivial task and is beyond the scope of this sample.
 
 ## See also
